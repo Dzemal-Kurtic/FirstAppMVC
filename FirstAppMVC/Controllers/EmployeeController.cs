@@ -38,5 +38,25 @@ namespace FirstAppMVC.Controllers
             }
             return View();
         }
+
+        [HttpGet]
+        public IActionResult Edit(int id)
+        {
+            var model = repository.GetEmployee(id);
+            return View(model);
+        }
+
+        [HttpPost]
+        public IActionResult Edit(Employee employee)
+        {
+            repository.Edit(employee);
+            return RedirectToAction("ViewAll");
+        }
+
+        public IActionResult Remove(int id)
+        {
+            repository.Delete(id);
+            return RedirectToAction("ViewAll");
+        }
     }
 }

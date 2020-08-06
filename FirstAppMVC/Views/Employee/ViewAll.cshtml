@@ -16,8 +16,8 @@
                 <td>@employee.Name</td>
                 <td>@employee.Age</td>
                 <td>@employee.Department</td>
-                <td><a asp-controller="Employee" asp-action="Edit">Edit employee</a></td>
-                <td><a asp-controller="Employee" asp-action="Remove">Remove employee</a></td>
+                <td><a asp-controller="Employee" asp-action="Edit" asp-route-id="@employee.Id">Edit</a></td>
+                <td><a asp-controller="Employee" asp-action="Remove" asp-route-id="@employee.Id">Remove</a></td>
             </tr>
         }
     </tbody>
