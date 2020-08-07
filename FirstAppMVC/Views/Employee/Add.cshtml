@@ -2,20 +2,29 @@
 
 <h1>Please add an employee</h1>
 
-<form method="post">
+<form asp-controller="Employee" asp-action="Add" method="post">
     <p>
         <label asp-for="Name"></label>
         <input asp-for="Name" />
+        <span asp-validation-for="Name"></span>
     </p>
 
     <p>
         <label asp-for="Age"></label>
         <input asp-for="Age" />
+        <span asp-validation-for="Age"></span>
     </p>
 
     <p>
-        <select asp-for="Department" asp-items="Html.GetEnumSelectList<Dept>()"></select>     
+        <select asp-for="Department" asp-items="Html.GetEnumSelectList<Dept>()">
+            <option value="">None</option>
+        </select>
+        <span asp-validation-for="Department"></span>
     </p>
+
+    <div asp-validation-summary="All"></div>
 
     <button type="submit">Submit</button>
 </form>
+
+<a asp-controller="Employee" asp-action="ViewAll">Cancel</a>
