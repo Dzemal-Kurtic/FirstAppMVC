@@ -18,13 +18,16 @@
                 <td>@employee.Name</td>
                 <td>@employee.Age</td>
                 <td>@employee.Department</td>
-                <td><a asp-controller="Employee" asp-action="Edit" asp-route-id="@employee.Id">Edit</a></td>
-                <td><a asp-controller="Employee" asp-action="Remove" asp-route-id="@employee.Id">Remove</a></td>
+                <td><a asp-controller="Employee" asp-action="Edit" asp-route-id="@employee.Id" class="btn btn-primary">Edit</a></td>
+                <td><a asp-controller="Employee" asp-action="Remove" asp-route-id="@employee.Id" class="btn btn-primary">Remove</a></td>
             </tr>
         }
     </tbody>
 </table>
 
-<a asp-controller="Employee" asp-action="Add">Add a worker</a>
 <br />
-<a asp-controller="Home" asp-action="Index">Go back to home page</a>
+<br />
+
+<a asp-controller="Employee" asp-action="Add" class="btn btn-primary">Add a worker</a>
+
+<a asp-controller="Home" asp-action="Index" class="btn btn-primary">Go back to home page</a>

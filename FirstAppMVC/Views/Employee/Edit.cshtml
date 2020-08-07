@@ -17,5 +17,7 @@
         <select asp-for="Department" asp-items="Html.GetEnumSelectList<Dept>()"></select>
     </p>
 
-    <button type="submit">Submit</button>
+    <button type="submit" class="btn btn-primary">Save</button>
+
+    <a asp-controller="Employee" asp-action="ViewAll" class="btn btn-primary">Cancel</a>
 </form>
