@@ -19,6 +19,7 @@ namespace FirstAppMVC.ViewModels
         [Required]
         [Compare("Password", ErrorMessage = "Your passwords don't match")]
         [Display(Name = "Confirm Password")]
+        [DataType(DataType.Password)]
         public string ConfirmPassword { get; set; }
     }
 }

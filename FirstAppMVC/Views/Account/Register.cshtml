@@ -20,6 +20,8 @@
         <span asp-validation-for="ConfirmPassword"></span>
     </div>
 
+    <div asp-validation-summary="All" class="text-danger"></div>
+
     <div>
         <button type="submit" class="btn btn-outline-success">Register account</button>
         <a asp-controller="Employee" asp-action="ViewAll" class="btn btn-secondary">Return to employee list</a>
