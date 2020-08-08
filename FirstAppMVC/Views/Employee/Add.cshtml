@@ -15,12 +15,13 @@
         <span asp-validation-for="Age"></span>
     </div>
 
-    <p class="form-group">
-        <select asp-for="Department" asp-items="Html.GetEnumSelectList<Dept>()">
+    <div class="form-group">
+        <label asp-for="Department"></label>
+        <select asp-for="Department" asp-items="Html.GetEnumSelectList<Dept>()" class="form-control">
             <option value="">None</option>
         </select>
         <span asp-validation-for="Department"></span>
-    </p>
+    </div>
 
     <div asp-validation-summary="All" ></div>
 

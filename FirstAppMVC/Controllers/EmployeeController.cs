@@ -49,8 +49,12 @@ namespace FirstAppMVC.Controllers
         [HttpPost]
         public IActionResult Edit(Employee employee)
         {
-            repository.Edit(employee);
-            return RedirectToAction("ViewAll");
+            if (ModelState.IsValid)
+            {
+                repository.Edit(employee);
+                return RedirectToAction("ViewAll");
+            }
+            return View();
         }
 
         public IActionResult Remove(int id)
