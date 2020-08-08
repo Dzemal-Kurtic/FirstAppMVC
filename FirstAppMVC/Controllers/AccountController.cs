@@ -15,7 +15,7 @@ namespace FirstAppMVC.Controllers
             return View();
         }
 
-        [HttpGet]
+        [HttpPost]
         public IActionResult Register(RegisterViewModel model)
         {
             return View();

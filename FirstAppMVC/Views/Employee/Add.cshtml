@@ -18,14 +18,14 @@
     <div class="form-group">
         <label asp-for="Department"></label>
         <select asp-for="Department" asp-items="Html.GetEnumSelectList<Dept>()" class="form-control">
-            <option value="">None</option>
+            <option value="None">None</option>
         </select>
         <span asp-validation-for="Department"></span>
     </div>
 
     <div asp-validation-summary="All" ></div>
 
-    <button type="submit" class="btn btn-primary">Create employee</button>
+    <button type="submit" class="btn btn-outline-success">Create employee</button>
     <a asp-controller="Employee" asp-action="ViewAll" class="btn btn-secondary">Cancel</a>
 </form>
 
