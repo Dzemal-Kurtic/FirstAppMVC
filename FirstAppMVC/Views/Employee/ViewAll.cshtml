@@ -1,5 +1,9 @@
 ﻿@model IEnumerable<Employee>
 
+@{ 
+    ViewBag.Title = "All Employees";
+}
+
 <h1>List of all employees</h1>
 
 <table class="table table-hover">
@@ -28,6 +32,6 @@
 <br />
 <br />
 
-<a asp-controller="Employee" asp-action="Add" class="btn btn-primary">Add a worker</a>
+<a asp-controller="Employee" asp-action="Add" class="btn btn-primary">Add an employee</a>
 
 <a asp-controller="Home" asp-action="Index" class="btn btn-secondary">Go back to home page</a>

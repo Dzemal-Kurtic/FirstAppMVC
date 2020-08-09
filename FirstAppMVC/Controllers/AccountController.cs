@@ -19,6 +19,13 @@ namespace FirstAppMVC.Controllers
             this.userManager = userManager;
         }
 
+        [HttpPost]
+        public async Task<IActionResult> Logout()
+        {
+            await signInManager.SignOutAsync();
+            return RedirectToAction("index", "home");
+        }
+
         [HttpGet]
         public IActionResult Register()
         {
@@ -49,6 +56,12 @@ namespace FirstAppMVC.Controllers
                     ModelState.AddModelError(string.Empty, error.Description);
                 }
             }
+            return View();
+        }
+
+        [HttpGet]
+        public IActionResult Login()
+        {
             return View();
         }
     }
