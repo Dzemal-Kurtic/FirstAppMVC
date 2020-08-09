@@ -64,5 +64,19 @@ namespace FirstAppMVC.Controllers
         {
             return View();
         }
+
+        [HttpPost]
+        public async Task<IActionResult> Login(LoginViewModel model)
+        {
+            var result = await signInManager.PasswordSignInAsync(model.Email, model.Password, model.RememberMe, false);
+
+            if (result.Succeeded)
+            {
+                return RedirectToAction("Index", "Home");
+            }
+
+            ModelState.AddModelError(string.Empty, "Isnvalid Login Attempt");
+            return View();
+        }
     }
 }
